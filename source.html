@@ -90,13 +90,6 @@
                   }
                 }
             
-                #frost{
-                  position: fixed;
-                  top: 130px;
-                  left: 50px;
-                  width: 75%;
-                }
-            
                 .frostUnclicked {
                   opacity: 0;
                 }
@@ -121,13 +114,6 @@
     <body ng-app="belif">
    
 		<div class="main-page page-text stretch-to-fit" onclick="handleClick()">
-      <img src="assets/BG.svg" style="position: fixed; top: 0; left: 0; width: 100%;"/>
-      <div id="shakeContainer">
-        <img src="assets/globe.svg" style="position: fixed; top: -100; left: 0; width: 100%;"/>
-        <img src="assets/product.svg" style="position: fixed; top: -100; left: 0; width: 100%;"/>
-        <img src="assets/Frost.svg" id="frost" class="frostUnclicked"/>
-      </div>
-		<div class="main-page-container fill-height color-2">
 	
 		   				   					    	<div class="page-header navbar navbar-top bg-color-1 color-2">
 
@@ -143,7 +129,15 @@
 
 </div>		    	
 								<div class="page-body text-center" fill-height>
-									
+                  <div id="svgBox" style="z-index: -2;">
+                    <img src="assets/BG.svg" style="margin: -40px;; overflow: hidden;"/>
+                      <div id="shakeContainer" style="z-index: -1;"/>>
+                        <img src="assets/globe2.svg" style="margin: -160px auto 0 auto; width: 80%"/>
+                        <img src="assets/product2.svg" style="margin: -310px auto 0 auto; width: 80%"/>
+                        <img src="assets/Frost.svg" id="frost" class="frostUnclicked" style="margin: -400px auto 0 auto; width: 75%"/>
+                      </div>
+                  </div>
+                  <div class="main-page-container fill-height color-2">
 					<div class="stretch-to-fit">
 
 		        				        		
@@ -291,3 +285,6 @@
     
     </script>
 </html>
+
+<!-- original viewbox 0 0 655.63 681.05 -->
+<!-- adjusted viewbox -71 -230 784 1496 -->
